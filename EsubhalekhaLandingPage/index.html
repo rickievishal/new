@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esubhalekha</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css"
+      integrity="sha512-X/RSQYxFb/tvuz6aNRTfKXDnQzmnzoawgEQ4X8nZNftzs8KFFH23p/BA6D2k0QCM4R0sY1DEy9MIY9b3fwi+bg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+      integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <style>
+    .owl-nav .owl-prev,
+    .owl-nav .owl-next {
+    }
+
+    .owl-nav .owl-prev {
+      display: hidden;
+    }
+    .owl-nav .owl-prev span,
+    .owl-nav .owl-next span {
+      display: hidden;
+      border-radius: 100%;
+      color: black;
+    }
+
+    .owl-nav .owl-next {
+      display: hidden;
+      background-color: black;
+      right: 10px;
+    }
+
+    .owl-dots {
+      display: hidden;
+    }
+
+    .owl-dots .owl-dot {
+      display: hidden;
+    }
+
+    .owl-dots .owl-dot span {
+      display: hidden;
+    }
+  </style>
+  <body class="bg-[#FFF7F8] w-screen relative px-auto">
+    <nav
+      class="fixed top-0 left-0 px-4 min-w-full h-[80px] backdrop-blur-md z-40 bg-[rgb(241,241,241,0.1)]"
+    >
+      <div
+        class="w-full h-full flex flex-row justify-between items-center max-w-7xl mx-auto"
+      >
+        <div class="esubhalekha-logo">
+          <div class="w-[100px] h-full">
+            <img
+              class="w-full h-full object-contain"
+              src="./assets/svg/esubhalekha-logo.svg"
+              alt=""
+            />
+          </div>
+        </div>
+        <ul
+          class="hidden sm:flex flex-row gap-x-5 justify-center items-center text-md text-[#86363B]"
+        >
+          <li>
+            <a href="" class="">Pricing</a>
+          </li>
+          <li>
+            <a href="" class="">Pricing</a>
+          </li>
+          <li>
+            <a href="" class="">Pricing</a>
+          </li>
+          <button
+            class="bg-[#86363B] w-[150px] py-1 rounded-l-full rounded-r-full"
+          >
+            <a
+              href=""
+              class="bg-gradient-to-br from-gray-50 to-red-200 bg-clip-text text-transparent"
+              >Book Now</a
+            >
+          </button>
+        </ul>
+        <div class="menu-button scale-90 sm:hidden">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAI9JREFUWEft1TEOgCAMhWG4FIueTBcXPZkuXEoX3SB/TEPSJs+1KakfD8jJ2ZedzZM0EO2IhCREAlSPk6GjTDf9jaW+1KuJ0RXSQC93nAxZ8mHplRDpdYX2Mm/UbKmv9Wyur2P/qf6+GN1tmSUfll4de9KLI6TXnl57d0IUvlH1OKEeJUDrSkhCJEB1ZYiEHqDGKCX0V+OkAAAAAElFTkSuQmCC"
+          />
+        </div>
+        <!-- this part is the menu which should be conditionally rendered for the mobile devices -->
+        <!-- the mobile-menu-options starts here -->
+        <!-- <div
+          class="menu-screen-mobile-view block sm:hidden w-screen h-screen flex flex-col justify-center items-center bg-[#86363B] fixed top-0 left-0"
+        >
+          <div class="header-menu flex justify-center py-5">
+            <div class="esubhalekha-logo fixed top-0 mt-5">
+              <div class="w-[100px] h-full">
+                <img
+                  class="w-full h-full object-contain"
+                  src="./assets/svg/esubhalekha-logo-white.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <ul class="flex flex-col justify-center items-center gap-y-6">
+            <li
+              class="text-3xl bg-gradient-to-br from-gray-50 to-red-200 bg-clip-text text-transparent"
+            >
+              <a href="">Pricing.</a>
+            </li>
+            <li
+              class="text-3xl bg-gradient-to-br from-gray-50 to-red-200 bg-clip-text text-transparent"
+            >
+              <a href="">About Us.</a>
+            </li>
+            <li
+              class="text-3xl bg-gradient-to-br from-gray-50 to-red-200 bg-clip-text text-transparent"
+            >
+              <a href="">Products.</a>
+            </li>
+            <li
+              class="text-3xl bg-gradient-to-br from-gray-50 to-red-200 bg-clip-text text-transparent"
+            >
+              <a href="">Wedding Exlusives.</a>
+            </li>
+            <li
+              class="px-4 py-2 text-3xl bg-gradient-to-br from-gray-50 to-red-200 rounded-l-full rounded-r-full text-[#86363B]"
+            >
+              <a href="">Book Now.</a>
+            </li>
+    
+            <button class="px-4 py-2 text-3xl text-[#86363B] rotate-45 absolute top-[100px] right-3">
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAALFJREFUaEPtlkEKwCAMBPUv/v9F/qWll1Is4mpYimV6NUnN7EaS0+Zf3vz+iQa+VhAFUCBIAAsFAYbTUaCHsNZ6PM9KKRZYlqLXxWlAnA4UYAZEq/TCsBAWwkJBAlgoCFB+hdrVIPjfYbq6O9HAEOViAAosgrvTWKdFgvIQi/VQYBYUCrBKzHqmicdCWAgLBQn81kImLq+ytleIBkQCKCCCsoWhgA2tWBgFRFC2sO0VOAHPtnAx/OjmOQAAAABJRU5ErkJggg=="
+              />
+            </button>
+          </ul>
+        </div> -->
+        <!-- the mobile-menu-options ends here -->
+      </div>
+    </nav>
+    <div class="blob-left-1 w-[200px] sm:w-auto absolute left-0">
+      <img class="w-full" src="./assets/svg/hero-left-1.svg" alt="" />
+    </div>
+    <div class="blob-left-2 w-[250px] sm:w-auto absolute left-0">
+      <img class="w-full" src="./assets/svg/hero-left-2.svg" alt="" />
+    </div>
+
+    <div class="blob-right-1 w-[30px] sm:w-auto absolute right-0">
+      <img class="w-full" src="./assets/svg/hero-right-1.svg" alt="" />
+    </div>
+    <div class="blob-right-2 w-[60px] sm:w-auto absolute right-0">
+      <img class="w-full" src="./assets/svg/hero-right-2.svg" alt="" />
+    </div>
+
+    <div class="main-page-content flex flex-col w-full overflow-x-hidden">
+      <div
+        class="main-hero-section w-full h-screen flex flex-col justify-center items-center max-w-6xl  mx-auto"
+      >
+        <div
+          class="content-header w-full flex flex-col justify-center items-center gap-y-2 px-4"
+        >
+          <p
+            class="text-sm px-4 rounded-l-full rounded-r-full text-center bg-[#E6CDCF] border border-[#86363B] text-[#86363B]"
+          >
+            special moments
+          </p>
+          <h1 class="w-full text-4xl text-center text-[#86363B]">
+            Want Online Wedding Invitation?
+          </h1>
+          <p
+            class="max-w-sm w-full text-sm text-[#B67478] text-center leading-tight"
+          >
+            an unknown printer took a galley of type and scrambled it to make a
+            type
+          </p>
+          <button class="mt-[40px] px-6 py-2 text-[#E9E9E9] bg-[#86363B]">
+            Book now
+          </button>
+        </div>
+        <div class="main-hero-content hero-img max-w-6xl mt-[100px] min-h-[250px]  z-20">
+          <img class="w-full h-full object-cover" src="./assets/images/hero-main.png" alt="">
+        </div>
+        <!-- <div
+          class="main-hero-content-video mt-5 w-full h-[300px] border border-[#86363B] rounded-3xl shadow-xl overflow-hidden relative max-w-lg"
+        >
+          <button
+            class="video-pause-btn absolute right-3 bottom-3 z-10 w-[40px] h-[40px] flex justify-center items-center bg-[rgb(241,241,241,0.3)] border border-[rgb(241,241,241,0.4)] rounded-full backdrop-blur-lg"
+          >
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAEtJREFUSEtjZKAxYKSx+QyjFhAM4REQRB8/fvwPCwd+fn6wj7GJ4QorgkE0asFoEDHAUtZoKgKHAE0yGsHSjIACgsl01ILRICKYBgBlB1AZ7ZbUdwAAAABJRU5ErkJggg=="
+            />
+          </button>
+          <img
+            class="w-full h-full object-cover "
+            src="./assets/images/hero-main.png"
+            alt=""
+          />
+        </div> -->
+      </div>
+      <div class="section-2 w-full max-w-6xl px-4 mx-auto">
+        <div
+          class="section-2-content w-full flex flex-col sm:flex sm:flex-row justify-center items-center gap-3"
+        >
+          <div
+            class="section-2-content-header w-full sm:w-[50%] h-full flex flex-col justify-center sm:items-start items-center"
+          >
+            <p
+              class="text-sm px-4 rounded-l-full rounded-r-full text-center bg-[#E6CDCF] border border-[#86363B] text-[#86363B]"
+            >
+              Easy to use
+            </p>
+            <h2
+              class="w-full text-3xl sm:text-left text-center text-[#86363B] leading-tight"
+            >
+              Get started in seconds.
+            </h2>
+            <p
+              class="max-w-sm w-full sm:text-left text-sm text-[#B67478] text-center leading-tight"
+            >
+              an unknown printer took a galley of type and scrambled it to make
+              a type
+            </p>
+            <button class="mt-[40px] px-6 py-2 text-[#E9E9E9] bg-[#86363B]">
+              Explore
+            </button>
+          </div>
+          <div class="section-2-hero-img sm:col-span-1 h-[700px] sm:h-[800px]">
+            <img
+              class="h-full"
+              src="./assets/images/section-2-page-hero.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <!-- section-3 services  -->
+      <div
+        class="section-3 w-full lg:h-screen flex flex-col justify-center items-center py-[50px] max-w-6xl px-4 mx-auto"
+      >
+        <div
+          class="section-3-content-header flex flex-col justify-center items-center py-[50px]"
+        >
+          <h3 class="w-full text-3xl text-center text-[#86363B] leading-tight">
+            Services we offer.
+          </h3>
+          <p
+            class="max-w-sm w-full text-sm text-[#B67478] text-center leading-tight"
+          >
+            an unknown printer took a galley of type and scrambled it to make a
+            type
+          </p>
+        </div>
+        <div
+          class="section-3-container flex gap-3 flex-wrap justify-center items-center lg:px-[50px]"
+        >
+          <div
+            class="card w-[130px] h-[130px] sm:w-[250px] sm:h-[250px] bgb bg-gradient-to-br from-[#86363B] via-red-800 to-[#86363B] rounded-3xl shadow-lg flex flex-col justify-center items-center gap-2"
+          >
+            <div class="card-img w-[50px] h-[50px] sm:w-[80px] sm:h-[80px]">
+              <img
+                class="w-full h-full object-contain"
+                src="./assets/images/calendar-icon.png"
+                alt=""
+              />
+            </div>
+            <div class="card-content">
+              <p
+                class="max-w-[200px] text-xs sm:text-lg text-[#F1F1F1] text-center leading-tight"
+              >
+                Save the dates with reminder
+              </p>
+            </div>
+          </div>
+          <div
+            class="card w-[130px] h-[130px] sm:w-[250px] sm:h-[250px] bgb bg-gradient-to-br from-[#86363B] via-red-800 to-[#86363B] rounded-3xl shadow-lg flex flex-col justify-center items-center gap-2"
+          >
+            <div class="card-img w-[50px] h-[50px] sm:w-[80px] sm:h-[80px]">
+              <img
+                class="w-full h-full object-contain"
+                src="./assets/images/invite-icon.png"
+                alt=""
+              />
+            </div>
+            <div class="card-content">
+              <p
+                class="max-w-[200px] text-xs sm:text-lg text-[#F1F1F1] text-center leading-tight"
+              >
+                RSVP & Guest Management
+              </p>
+            </div>
+          </div>
+          <div
+            class="card w-[130px] h-[130px] sm:w-[250px] sm:h-[250px] bgb bg-gradient-to-br from-[#86363B] via-red-800 to-[#86363B] rounded-3xl shadow-lg flex flex-col justify-center items-center gap-2"
+          >
+            <div class="card-img w-[50px] h-[50px] sm:w-[80px] sm:h-[80px]">
+              <img
+                class="w-full h-full object-contain"
+                src="./assets/images/location-icon.png"
+                alt=""
+              />
+            </div>
+            <div class="card-content">
+              <p
+                class="max-w-[200px] text-xs sm:text-lg text-[#F1F1F1] text-center leading-tight"
+              >
+                Directions to venue
+              </p>
+            </div>
+          </div>
+          <div
+            class="card w-[130px] h-[130px] sm:w-[250px] sm:h-[250px] bgb bg-gradient-to-br from-[#86363B] via-red-800 to-[#86363B] rounded-3xl shadow-lg flex flex-col justify-center items-center gap-2"
+          >
+            <div class="card-img w-[50px] h-[50px] sm:w-[80px] sm:h-[80px]">
+              <img
+                class="w-full h-full object-contain"
+                src="./assets/images/qr-icon.png"
+                alt=""
+              />
+            </div>
+            <div class="card-content">
+              <p
+                class="max-w-[200px] text-xs sm:text-lg text-[#F1F1F1] text-center leading-tight"
+              >
+                Visiting cards with QR Code
+              </p>
+            </div>
+          </div>
+          <div
+            class="card w-[130px] h-[130px] sm:w-[250px] sm:h-[250px] bgb bg-gradient-to-br from-[#86363B] via-red-800 to-[#86363B] rounded-3xl shadow-lg flex flex-col justify-center items-center gap-2"
+          >
+            <div class="card-img w-[50px] h-[50px] sm:w-[80px] sm:h-[80px]">
+              <img
+                class="w-full h-full object-contain"
+                src="./assets/images/template-icon.png"
+                alt=""
+              />
+            </div>
+            <div class="card-content">
+              <p
+                class="max-w-[190px] text-xs sm:text-lg text-[#F1F1F1] text-center leading-tight"
+              >
+                Wide range of templates
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- section-3 services ends -->
+      <!-- section-4 Testimonials -->
+      <!-- <div
+        class="section-4 w-full lg:h-screen flex flex-col justify-center items-center gap-5 max-w-6xl px-4 mx-auto"
+      >
+        <div class="section-header flex flex-col justify-center items-center">
+          <h4 class="w-full text-3xl text-center text-[#86363B] leading-[20pt]">
+            Our customers come first. Every single time
+          </h4>
+          <p
+            class="max-w-sm w-full text-sm text-[#B67478] text-center leading-tight mt-2"
+          >
+            an unknown printer took a galley of type and scrambled it to make a
+            type
+          </p>
+        </div>
+
+        <div id="2" class="w-full relative">
+          <div
+            class="prev-2 prev w-[50px] h-[50px] absolute top-1/2 -translate-y-1/2 left-0 bg-[rgb(255,255,255,0.8)] backdrop-blur-lg shadow-lg border-white text-white z-20 rounded-full flex justify-center items-center"
+          >
+            <i class="bx bx-left-arrow-alt text-black text-lg"></i>
+          </div>
+          <div
+            class="next-2 next w-[50px] h-[50px] absolute top-1/2 -translate-y-1/2 right-0 bg-[rgb(255,255,255,0.8)] backdrop-blur-lg shadow-lg border-white text-white z-20 rounded-full flex justify-center items-center"
+          >
+            <i class="bx bx-right-arrow-alt text-black text-lg"></i>
+          </div>
+          <div
+            class="carousel-2 owl-carousel max-w-6xl mx-auto mb-5 w-full h-[500px] flex justify-center items-center"
+          >
+            <div
+              class="card-container w-[280px] h-[500px] flex justify-end items-end relative mx-auto"
+            >
+              <div
+                class="card-image absolute top-0 w-[200px] h-[300px] bg-white right-1/2 translate-x-1/2 rounded-t-full border border-[#DDB66E] overflow-hidden"
+              >
+                <img
+                  class="w-full h-full object-cover"
+                  src="./assets/images/customer-review-placeholder.png"
+                  alt=""
+                />
+              </div>
+              <div
+                class="card-content-data w-full h-[350px] bg-[#212121] pt-[160px] flex flex-col justify-start items-center px-3 border border-[#DDB66E]"
+              >
+                <p class="review-content text-center font-thin text-[#E4E4E4]">
+                  "We wanted something unique and special for our wedding, and
+                  eSubhalekha delivered! Our digital invites were personal,
+                  classy, and so easy to share with our family and friends."
+                </p>
+                <p class="review-author text-[#C89954]">Anjali & Ramesh</p>
+              </div>
+            </div>
+            <div
+              class="card-container w-[280px] h-[500px] flex justify-end items-end relative mx-auto"
+            >
+              <div
+                class="card-image absolute top-0 w-[200px] h-[300px] bg-white right-1/2 translate-x-1/2 rounded-t-full border border-[#DDB66E] overflow-hidden"
+              >
+                <img
+                  class="w-full h-full object-cover"
+                  src="./assets/images/customer-review-placeholder.png"
+                  alt=""
+                />
+              </div>
+              <div
+                class="card-content-data w-full h-[350px] bg-[#212121] pt-[160px] flex flex-col justify-start items-center px-3 border border-[#DDB66E]"
+              >
+                <p class="review-content text-center font-thin text-[#E4E4E4]">
+                  "We wanted something unique and special for our wedding, and
+                  eSubhalekha delivered! Our digital invites were personal,
+                  classy, and so easy to share with our family and friends."
+                </p>
+                <p class="review-author text-[#C89954]">Anjali & Ramesh</p>
+              </div>
+            </div>
+
+            <div
+              class="card-container w-[280px] h-[500px] flex justify-end items-end relative mx-auto"
+            >
+              <div
+                class="card-image absolute top-0 w-[200px] h-[300px] bg-white right-1/2 translate-x-1/2 rounded-t-full border border-[#DDB66E] overflow-hidden"
+              >
+                <img
+                  class="w-full h-full object-cover"
+                  src="./assets/images/customer-review-placeholder.png"
+                  alt=""
+                />
+              </div>
+              <div
+                class="card-content-data w-full h-[350px] bg-[#212121] pt-[160px] flex flex-col justify-start items-center px-3 border border-[#DDB66E]"
+              >
+                <p class="review-content text-center font-thin text-[#E4E4E4]">
+                  "We wanted something unique and special for our wedding, and
+                  eSubhalekha delivered! Our digital invites were personal,
+                  classy, and so easy to share with our family and friends."
+                </p>
+                <p class="review-author text-[#C89954]">Anjali & Ramesh</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full h-[70px] flex overflow-hidden bg-[#1A0000]">
+        <img
+          class="h-full"
+          src="./assets/images/long-decor-border.png"
+          alt=""
+        />
+        <img
+          class="h-full"
+          src="./assets/images/long-decor-border.png"
+          alt=""
+        />
+        <img
+          class="h-full"
+          src="./assets/images/long-decor-border.png"
+          alt=""
+        />
+        <img
+          class="h-full"
+          src="./assets/images/long-decor-border.png"
+          alt=""
+        />
+      </div> -->
+      <!-- section-4 Testimonials ends -->
+      <!-- section-5 pricing-section -->
+      <!-- <div
+        class="section-5 w-full py-[50px] flex justify-center items-center bg-[#1A0000]"
+      >
+        <div
+          class="section-5-content flex flex-col justify-center items-center max-w-6xl px-4 mx-auto"
+        >
+          <div class="section-5-header mb-5">
+            <h5
+              class="w-full text-3xl text-center text-transparent bg-clip-text bg-gradient-to-b from-amber-500 via-amber-400 to-amber-500"
+            >
+              Pricing
+            </h5>
+            <p
+              class="max-w-sm w-full text-sm text-[#927549] text-center leading-tight px-4"
+            >
+              an unknown printer took a galley of type and scrambled it to make
+              a type
+            </p>
+          </div>
+          <div
+            class="pricing-card-list flex flex-wrap justify-center items-center gap-2 mt-5"
+          >
+            <div
+              class="pricing-content-container scale-90 lg:scale-100 flex flex-col gap-2 justify-center items-center"
+            >
+              <h6
+                class="text-2xl text-transparent bg-clip-text bg-gradient-to-b from-[#FFFFFF] to-[#AEAEAE]"
+              >
+                Silver
+              </h6>
+              <div
+                class="relative pricing-card w-[280px] sm:w-[300px] h-[470px] sm:h-[480px] flex flex-col justify-center items-center bg-[#D9D9D9] border border-[#6B6B6B] rounded-3xl overflow-hidden"
+              >
+                <div class="decor-top w-full absolute top-5">
+                  <img src="./assets/images/silver-border-decor.png" alt="" />
+                </div>
+                <div class="decor-bottom w-full absolute bottom-5">
+                  <img src="./assets/images/silver-border-decor.png" alt="" />
+                </div>
+                <div
+                  class="pricing-card-content w-full h-full flex flex-col justify-center items-center"
+                >
+                  <h6 class="text-4xl text-[#5F5F5F]">₹12000</h6>
+                  <div
+                    class="text-lg pricing-card-features flex flex-col gap-1 my-[50px] text-4xl"
+                  >
+                    <div class="pricing-card-feature flex gap-1">
+                      <div
+                        class="w-[30px] h-[30px] flex justify-center items-center"
+                      >
+                        <img
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAVJJREFUSEu1VduRxCAMg8ouWwl0crudQCWbq4xbeTCjEF7ZmeQnL5Bsy8jW3HzZm/HNlMB7vxljtpTSTw5ms9a+8vMeQthHQXYJAJxS+gX4JMsdhD2iJoH3/pnBgQ2AP9zxAiD8xzOtMZlEvvN1ImDw3iYGmK0/EOSyvAGwAq5EFcmDy3UgcM4BXEQMIZzSHWlBJHuM8aFrCwFHH2OcdhcAsIejpQBLFkwgwq5G38pWs2CMrwgUHJ3F5aAqlO+FwDmXkDaXBxHVWvTAtWSfAwkdmwQqsNSvFc0IXEWtA+UMDgTYwIBqE3VZWmfikgZEIqeaa1637UxkeM+hfpS2HL4ReM5YdPxYy7lNuSSrrdqxjPZBq7rgHqvIJMVJVzK5ZHYt81Ljy1b9zAMIrzqEZF4s2zWR3DdwKvFkZOJbHjAyeHQIfT0yR9Z85d+SLV8BrNf+A1kqPyhhS4nyAAAAAElFTkSuQmCC"
+                        />
+                      </div>
+                      <p>Basic domain (no subdomain)</p>
+                    </div>
+                    <div class="pricing-card-feature flex gap-1">
+                      <div
+                        class="w-[30px] h-[30px] flex justify-center items-center"
+                      >
+                        <img
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAVJJREFUSEu1VduRxCAMg8ouWwl0crudQCWbq4xbeTCjEF7ZmeQnL5Bsy8jW3HzZm/HNlMB7vxljtpTSTw5ms9a+8vMeQthHQXYJAJxS+gX4JMsdhD2iJoH3/pnBgQ2AP9zxAiD8xzOtMZlEvvN1ImDw3iYGmK0/EOSyvAGwAq5EFcmDy3UgcM4BXEQMIZzSHWlBJHuM8aFrCwFHH2OcdhcAsIejpQBLFkwgwq5G38pWs2CMrwgUHJ3F5aAqlO+FwDmXkDaXBxHVWvTAtWSfAwkdmwQqsNSvFc0IXEWtA+UMDgTYwIBqE3VZWmfikgZEIqeaa1637UxkeM+hfpS2HL4ReM5YdPxYy7lNuSSrrdqxjPZBq7rgHqvIJMVJVzK5ZHYt81Ljy1b9zAMIrzqEZF4s2zWR3DdwKvFkZOJbHjAyeHQIfT0yR9Z85d+SLV8BrNf+A1kqPyhhS4nyAAAAAElFTkSuQmCC"
+                        />
+                      </div>
+                      <p>Basic domain (no subdomain)</p>
+                    </div>
+                    <div class="pricing-card-feature flex gap-1">
+                      <div
+                        class="w-[30px] h-[30px] flex justify-center items-center"
+                      >
+                        <img
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAVJJREFUSEu1VduRxCAMg8ouWwl0crudQCWbq4xbeTCjEF7ZmeQnL5Bsy8jW3HzZm/HNlMB7vxljtpTSTw5ms9a+8vMeQthHQXYJAJxS+gX4JMsdhD2iJoH3/pnBgQ2AP9zxAiD8xzOtMZlEvvN1ImDw3iYGmK0/EOSyvAGwAq5EFcmDy3UgcM4BXEQMIZzSHWlBJHuM8aFrCwFHH2OcdhcAsIejpQBLFkwgwq5G38pWs2CMrwgUHJ3F5aAqlO+FwDmXkDaXBxHVWvTAtWSfAwkdmwQqsNSvFc0IXEWtA+UMDgTYwIBqE3VZWmfikgZEIqeaa1637UxkeM+hfpS2HL4ReM5YdPxYy7lNuSSrrdqxjPZBq7rgHqvIJMVJVzK5ZHYt81Ljy1b9zAMIrzqEZF4s2zWR3DdwKvFkZOJbHjAyeHQIfT0yR9Z85d+SLV8BrNf+A1kqPyhhS4nyAAAAAElFTkSuQmCC"
+                        />
+                      </div>
+                      <p>Basic domain (no subdomain)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="pricing-content-container scale-90 lg:scale-100 flex flex-col gap-2 justify-center items-center"
+            >
+              <h6
+                class="text-2xl text-transparent bg-clip-text bg-gradient-to-b from-amber-500 via-amber-400 to-amber-500"
+              >
+                Gold
+              </h6>
+              <div
+                class="relative pricing-card w-[280px] sm:w-[300px] h-[470px] sm:h-[480px] flex flex-col justify-center items-center bg-[#2B2B2B] border border-[#BB9334] rounded-3xl overflow-hidden"
+              >
+                <div class="decor-top w-full absolute top-5">
+                  <img src="./assets/images/gold-border-decor.png" alt="" />
+                </div>
+                <div class="decor-bottom w-full absolute bottom-5">
+                  <img src="./assets/images/gold-border-decor.png" alt="" />
+                </div>
+                <div
+                  class="pricing-card-content w-full h-full flex flex-col justify-center items-center"
+                >
+                  <h6
+                    class="text-4xl text-transparent bg-clip-text bg-gradient-to-b from-amber-500 via-amber-400 to-amber-500"
+                  >
+                    ₹18000
+                  </h6>
+                  <div
+                    class="text-lg pricing-card-features flex flex-col gap-1 my-[50px] text-4xl text-transparent bg-clip-text bg-gradient-to-b from-amber-500 via-amber-400 to-amber-500"
+                  >
+                    <div class="pricing-card-feature flex gap-1">
+                      <div
+                        class="w-[30px] h-[30px] flex justify-center items-center"
+                      >
+                        <img
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAVxJREFUSEu1VUt2gzAQk3sm9iWLpqfhDG3OwGmaLuLsOVPdJ5fhCde/5D1YGbAljWY843Dw4w7GR5Pgex7GH2B0wOsqZgzAhesXwL9Ni6+JLBIQOAAfAMZGlN4BlxJRluBrHj7dHzgfH4A71fKFQPzPtewBo3qflvhdn38ECl46pACt/TuC1ZYbAXrAjUhJHHBSu3YE13kgeExiLtxaLoTEn6flZHs3AlV/npZmdRGAZ1StCdQoNiBT0Ks+F20O4ykCA2eFqR3iwvZ9I7jOQ2DYag8VpbkogZtlAWAeswQxweZfTk0N3JKaCtUIdgQ8oIDWJlJbcndC89jMgZDEW62ep2VbTXLOEgk7Xr4a+BpxzGO2TNWS3lIttIz8RUuq4JhWQZJW8yr5XupfPe06RkMA3gnmimsZQvG9u12bwkMHjtpgI3OtDg6hOHhsCD09Mmut+ZF/XW35EcB07y/iAgkoX1VPjgAAAABJRU5ErkJggg=="
+                        />
+                      </div>
+                      <p>Basic domain (no subdomain)</p>
+                    </div>
+                    <div class="pricing-card-feature flex gap-1">
+                      <div
+                        class="w-[30px] h-[30px] flex justify-center items-center"
+                      >
+                        <img
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAVxJREFUSEu1VUt2gzAQk3sm9iWLpqfhDG3OwGmaLuLsOVPdJ5fhCde/5D1YGbAljWY843Dw4w7GR5Pgex7GH2B0wOsqZgzAhesXwL9Ni6+JLBIQOAAfAMZGlN4BlxJRluBrHj7dHzgfH4A71fKFQPzPtewBo3qflvhdn38ECl46pACt/TuC1ZYbAXrAjUhJHHBSu3YE13kgeExiLtxaLoTEn6flZHs3AlV/npZmdRGAZ1StCdQoNiBT0Ks+F20O4ykCA2eFqR3iwvZ9I7jOQ2DYag8VpbkogZtlAWAeswQxweZfTk0N3JKaCtUIdgQ8oIDWJlJbcndC89jMgZDEW62ep2VbTXLOEgk7Xr4a+BpxzGO2TNWS3lIttIz8RUuq4JhWQZJW8yr5XupfPe06RkMA3gnmimsZQvG9u12bwkMHjtpgI3OtDg6hOHhsCD09Mmut+ZF/XW35EcB07y/iAgkoX1VPjgAAAABJRU5ErkJggg=="
+                        />
+                      </div>
+                      <p>Basic domain (no subdomain)</p>
+                    </div>
+                    <div class="pricing-card-feature flex gap-1">
+                      <div
+                        class="w-[30px] h-[30px] flex justify-center items-center"
+                      >
+                        <img
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAVxJREFUSEu1VUt2gzAQk3sm9iWLpqfhDG3OwGmaLuLsOVPdJ5fhCde/5D1YGbAljWY843Dw4w7GR5Pgex7GH2B0wOsqZgzAhesXwL9Ni6+JLBIQOAAfAMZGlN4BlxJRluBrHj7dHzgfH4A71fKFQPzPtewBo3qflvhdn38ECl46pACt/TuC1ZYbAXrAjUhJHHBSu3YE13kgeExiLtxaLoTEn6flZHs3AlV/npZmdRGAZ1StCdQoNiBT0Ks+F20O4ykCA2eFqR3iwvZ9I7jOQ2DYag8VpbkogZtlAWAeswQxweZfTk0N3JKaCtUIdgQ8oIDWJlJbcndC89jMgZDEW62ep2VbTXLOEgk7Xr4a+BpxzGO2TNWS3lIttIz8RUuq4JhWQZJW8yr5XupfPe06RkMA3gnmimsZQvG9u12bwkMHjtpgI3OtDg6hOHhsCD09Mmut+ZF/XW35EcB07y/iAgkoX1VPjgAAAABJRU5ErkJggg=="
+                        />
+                      </div>
+                      <p>Basic domain (no subdomain)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="pricing-content-container scale-90 lg:scale-100 flex flex-col gap-2 justify-center items-center"
+            >
+              <h6
+                class="text-2xl text-transparent bg-clip-text bg-gradient-to-b from-[#AAAAAA] to-[#6D2100]"
+              >
+                Bronze
+              </h6>
+              <div
+                class="relative pricing-card w-[280px] sm:w-[300px] h-[470px] sm:h-[480px] flex flex-col justify-center items-center bg-[#E9E9E9] border border-[#BB9334] rounded-3xl overflow-hidden"
+              >
+                <div class="decor-top w-full absolute top-5">
+                  <img src="./assets/images/bronze-border-decor.png" alt="" />
+                </div>
+                <div class="decor-bottom w-full absolute bottom-5">
+                  <img src="./assets/images/bronze-border-decor.png" alt="" />
+                </div>
+                <div
+                  class="pricing-card-content w-full h-full flex flex-col justify-center items-center"
+                >
+                  <h6
+                    class="text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#AAAAAA] to-[#6D2100]"
+                  >
+                    ₹8000
+                  </h6>
+                  <div
+                    class="text-lg pricing-card-features flex flex-col gap-1 my-[50px] text-4xl"
+                  >
+                    <div class="pricing-card-feature flex gap-1">
+                      <div
+                        class="w-[30px] h-[30px] flex justify-center items-center"
+                      >
+                        <img
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAWFJREFUSEu1VUFywjAMXJeHNdzzC5gyfUXIKzp0wi98J31YcWdNZIRRHGBqnxzb2V2tZNmh8nCV8bFI8LVtmzegcQHvFBOABg4952dg/Bz8WBI5S0DgVUAXAQvDAeOvQz9HZBIctu0eAR1xCRAcfqiW3wSK+5dw4pk4HPrd4C/ratwRaPC5nzTA0vkbguh3wKmkyHJLk5wd1tquG4LvTXuSJFrhlnIhJLT04+jXV+emmVa/O/rF6uJv/EerFYE6igSUwpxJVq7eitbCeIlAwHM7xAW9fiXYtIEqtT1UlOdiDlwsY5GYBLl/lpoSuFh4yISmCKwEaUBpE7kt5p1QeVzMQUrmdKt1CeaJLybZskQASMJ5CZz7Yo9ZpjxQ9aLpKqjWKmKYqpP+e7NLpaZJplYc78jg98wV5/IIpffi0XYtJFUfHF1+8mTGtYCO9yBOp0fo5Sez1Jqf2XuoLT8DmJ/9A3ZJIigUhJYZAAAAAElFTkSuQmCC"
+                        />
+                      </div>
+                      <p
+                        class="text-transparent bg-clip-text bg-gradient-to-b from-[#AAAAAA] to-[#6D2100]"
+                      >
+                        Basic domain (no subdomain)
+                      </p>
+                    </div>
+                    <div class="pricing-card-feature flex gap-1">
+                      <div
+                        class="w-[30px] h-[30px] flex justify-center items-center"
+                      >
+                        <img
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAWFJREFUSEu1VUFywjAMXJeHNdzzC5gyfUXIKzp0wi98J31YcWdNZIRRHGBqnxzb2V2tZNmh8nCV8bFI8LVtmzegcQHvFBOABg4952dg/Bz8WBI5S0DgVUAXAQvDAeOvQz9HZBIctu0eAR1xCRAcfqiW3wSK+5dw4pk4HPrd4C/ratwRaPC5nzTA0vkbguh3wKmkyHJLk5wd1tquG4LvTXuSJFrhlnIhJLT04+jXV+emmVa/O/rF6uJv/EerFYE6igSUwpxJVq7eitbCeIlAwHM7xAW9fiXYtIEqtT1UlOdiDlwsY5GYBLl/lpoSuFh4yISmCKwEaUBpE7kt5p1QeVzMQUrmdKt1CeaJLybZskQASMJ5CZz7Yo9ZpjxQ9aLpKqjWKmKYqpP+e7NLpaZJplYc78jg98wV5/IIpffi0XYtJFUfHF1+8mTGtYCO9yBOp0fo5Sez1Jqf2XuoLT8DmJ/9A3ZJIigUhJYZAAAAAElFTkSuQmCC"
+                        />
+                      </div>
+                      <p
+                        class="text-transparent bg-clip-text bg-gradient-to-b from-[#AAAAAA] to-[#6D2100]"
+                      >
+                        Basic domain (no subdomain)
+                      </p>
+                    </div>
+                    <div class="pricing-card-feature flex gap-1">
+                      <div
+                        class="w-[30px] h-[30px] flex justify-center items-center"
+                      >
+                        <img
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAWFJREFUSEu1VUFywjAMXJeHNdzzC5gyfUXIKzp0wi98J31YcWdNZIRRHGBqnxzb2V2tZNmh8nCV8bFI8LVtmzegcQHvFBOABg4952dg/Bz8WBI5S0DgVUAXAQvDAeOvQz9HZBIctu0eAR1xCRAcfqiW3wSK+5dw4pk4HPrd4C/ratwRaPC5nzTA0vkbguh3wKmkyHJLk5wd1tquG4LvTXuSJFrhlnIhJLT04+jXV+emmVa/O/rF6uJv/EerFYE6igSUwpxJVq7eitbCeIlAwHM7xAW9fiXYtIEqtT1UlOdiDlwsY5GYBLl/lpoSuFh4yISmCKwEaUBpE7kt5p1QeVzMQUrmdKt1CeaJLybZskQASMJ5CZz7Yo9ZpjxQ9aLpKqjWKmKYqpP+e7NLpaZJplYc78jg98wV5/IIpffi0XYtJFUfHF1+8mTGtYCO9yBOp0fo5Sez1Jqf2XuoLT8DmJ/9A3ZJIigUhJYZAAAAAElFTkSuQmCC"
+                        />
+                      </div>
+                      <p
+                        class="text-transparent bg-clip-text bg-gradient-to-b from-[#AAAAAA] to-[#6D2100]"
+                      >
+                        Basic domain (no subdomain)
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <!-- section-5 pricing-section ends -->
+      <!-- section-6 product-demo  -->
+      <div class="section-6 w-full">
+        <!-- <div class="w-full h-[70px] flex overflow-hidden bg-[#1A0000]">
+          <img
+            class="h-full"
+            src="./assets/images/long-decor-border.png"
+            alt=""
+          />
+          <img
+            class="h-full"
+            src="./assets/images/long-decor-border.png"
+            alt=""
+          />
+          <img
+            class="h-full"
+            src="./assets/images/long-decor-border.png"
+            alt=""
+          />
+          <img
+            class="h-full"
+            src="./assets/images/long-decor-border.png"
+            alt=""
+          />
+        </div> -->
+        <div class="section-6-content w-full py-[50px] max-w-6xl mx-auto">
+          <div
+            class="section-6-header w-full flex flex-col justify-center items-center"
+          >
+            <h2
+              class="text-3xl text-center text-[#86363B] leading-tight mt-[50px]"
+            >
+              Elegant.Premium.Designs.
+            </h2>
+            <p
+              class="max-w-sm w-full text-sm text-[#B67478] text-center leading-tight"
+            >
+              an unknown printer took a galley of type and scrambled it to make
+              a type
+            </p>
+            <button class="mt-[30px] px-6 py-2 text-[#E9E9E9] bg-[#86363B]">
+              Explore
+            </button>
+          </div>
+          <div id="1" class="w-full h-full relative py-[100px]">
+            <div
+              class="prev-1 prev w-[50px] h-[50px] absolute top-1/2 -translate-y-1/2 left-0 bg-[rgb(255,255,255,0.8)] backdrop-blur-lg shadow-lg border-white text-white z-20 rounded-full flex justify-center items-center"
+            >
+              <i class="bx bx-left-arrow-alt text-black text-lg"></i>
+            </div>
+            <div
+              class="next-1 next w-[50px] h-[50px] absolute top-1/2 -translate-y-1/2 right-0 bg-[rgb(255,255,255,0.8)] backdrop-blur-lg shadow-lg border-white text-white z-20 rounded-full flex justify-center items-center"
+            >
+              <i class="bx bx-right-arrow-alt text-black text-lg"></i>
+            </div>
+            <div
+              class="carousel-1 owl-carousel max-w-6xl mx-auto mb-5 w-full flex justify-center items-center"
+            >
+              <div
+                class="template-demo-container mx-auto w-[300px] h-[250px] flex justify-end items-end relative"
+              >
+                <div
+                  class="template-demo-img flex justify-center items-center w-full h-[150px] absolute top-0"
+                >
+                  <img
+                    class="w-full h-full object-center"
+                    src="./assets/images/demo-2.png"
+                    alt=""
+                  />
+                </div>
+                <div
+                  class="template-demo-header-container w-full h-[150px] rounded-3xl flex justify-around items-center bg-black text-[#F1F1F1] mt-3"
+                >
+                  <p class="theme-name">GoldenGrace</p>
+                  <p
+                    class="theme-pricing px-3 rounded-l-full rounded-r-full border"
+                  >
+                    Gold
+                  </p>
+                </div>
+              </div>
+              <div
+                class="template-demo-container mx-auto w-[300px] h-[250px] flex justify-end items-end relative"
+              >
+                <div
+                  class="template-demo-img flex justify-center items-center w-full h-[150px] absolute top-0"
+                >
+                  <img
+                    class="w-full h-full object-center"
+                    src="./assets/images/theme-demo.png"
+                    alt=""
+                  />
+                </div>
+                <div
+                  class="template-demo-header-container w-full h-[150px] rounded-3xl flex justify-around items-center bg-black text-[#F1F1F1] mt-3"
+                >
+                  <p class="theme-name">Purple Blush</p>
+                  <p
+                    class="theme-pricing px-3 rounded-l-full rounded-r-full border"
+                  >
+                    Silver
+                  </p>
+                </div>
+              </div>
+              <div
+                class="template-demo-container mx-auto w-[300px] h-[250px] flex justify-end items-end relative"
+              >
+                <div
+                  class="template-demo-img flex justify-center items-center w-full h-[150px] absolute top-0"
+                >
+                  <img
+                    class="w-full h-full object-center"
+                    src="./assets/images/demo-3.png"
+                    alt=""
+                  />
+                </div>
+                <div
+                  class="template-demo-header-container w-full h-[150px] rounded-3xl flex justify-around items-center bg-black text-[#F1F1F1] mt-3"
+                >
+                  <p class="theme-name">TimelessVows</p>
+                  <p
+                    class="theme-pricing px-3 rounded-l-full rounded-r-full border"
+                  >
+                    Gold
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- section-6 product-demo ends -->
+      <!-- section-7 reach us out -->
+      <div class="section-7 w-full flex flex-col justify-center items-center">
+        <div
+          class="section-7-content flex-col justify-center items-center max-w-6xl mx-auto"
+        >
+          <div
+            class="section-7-header-content flex flex-col justify-center items-center"
+          >
+            <h2
+              class="text-3xl text-center text-[#86363B] leading-tight mt-[50px]"
+            >
+              Reach us out.
+            </h2>
+            <p
+              class="max-w-sm w-full text-sm text-[#B67478] text-center leading-tight"
+            >
+              an unknown printer took a galley of type and scrambled it to make
+              a type
+            </p>
+          </div>
+          <div class="input-wrapper flex flex-col justify-center items-center">
+            <input
+              type="text"
+              placeholder="Email"
+              class="max-w-xl w-full h-[50px] rounded-3xl bg-[#0B0B0B] border border-[#FFBF5C] mt-[40px] px-3 text-[#FFBF5C] placeholder:text-[#BA9334] shadow-xl"
+            />
+            <div
+              class="send-container w-full flex justify-center items-center relative"
+            >
+              <textarea
+                type="text"
+                placeholder="enter the message"
+                class="max-w-xl w-full h-[150px] rounded-3xl bg-[#0B0B0B] border border-[#FFBF5C] px-3 py-3 text-amber-500 placeholder:text-[#BA9334] shadow-xl"
+              ></textarea>
+              <button
+                class="absolute py-1 right-3 bottom-3 max-w-sm w-[100px] rounded-3xl bg-[#0B0B0B] border border-[#FFBF5C] px-3 text-amber-500 placeholder:text-amber-800"
+              >
+                Send
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-full h-[70px] flex overflow-hidden bg-[#3A0508] mt-[50px]"
+        >
+          <img
+            class="h-full"
+            src="./assets/images/long-decor-border.png"
+            alt=""
+          />
+          <img
+            class="h-full"
+            src="./assets/images/long-decor-border.png"
+            alt=""
+          />
+          <img
+            class="h-full"
+            src="./assets/images/long-decor-border.png"
+            alt=""
+          />
+        </div>
+      </div>
+      <!-- section-7 reach us out ends -->
+      <!-- footer section  -->
+      <footer
+        class="flex flex-wrap justify-around items-center bg-[#3A0508] py-[20px] pb-[60px] relative"
+      >
+        <p
+          class="absolute bottom-0 left-0 w-full h-[40px] flex justify-center items-center text-xs text-[#977D1B]"
+        >
+          All rights reserved @esubhalekha.com
+        </p>
+        <div
+          class="important-links flex flex-col justify-center items-center px-4 text-[#C9B25D]"
+        >
+          <h1 class="text-xl">Important links</h1>
+          <ul class="flex flex-col textxs">
+            <a href="" class="hover:underline">Important links</a>
+            <a href="">Important links</a>
+            <a href="">Important links</a>
+            <a href="">Important links</a>
+            <a href="">Important links</a>
+          </ul>
+        </div>
+        <div
+          class="important-links flex flex-col justify-center items-center px-4 text-[#C9B25D]"
+        >
+          <h1 class="text-xl">Important links</h1>
+          <ul class="flex flex-col textxs">
+            <a href="" class="hover:underline">Important links</a>
+            <a href="">Important links</a>
+            <a href="">Important links</a>
+            <a href="">Important links</a>
+            <a href="">Important links</a>
+          </ul>
+        </div>
+
+        <div class="flex flex-col gap-2 mt-5 lg:mt-0">
+          <h2
+            class="text-3xl lg:text-5xl bg-gradient-to-b from-[#FFEAB9] to-[#BA9334] bg-clip-text text-transparent ml-5"
+          >
+            Esubhalekha.com
+          </h2>
+          <p
+            class="text-xs bg-gradient-to-b from-[#FFEAB9] to-[#BA9334] bg-clip-text text-transparent ml-5"
+          >
+            your moments made with our services
+          </p>
+        </div>
+      </footer>
+      <!-- footer section ends  -->
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $(".carousel-1").owlCarousel({
+          loop: true,
+          margin: 10,
+          nav: false,
+          Autoplay: true,
+          responsive: {
+            0: {
+              items: 1,
+            },
+            600: {
+              items: 2,
+            },
+            800: {
+              items: 3,
+            },
+          },
+        });
+        $(".carousel-2").owlCarousel({
+          loop: true,
+          margin: 10,
+          nav: false,
+          Autoplay: true,
+          responsive: {
+            0: {
+              items: 1,
+            },
+            600: {
+              items: 2,
+            },
+            800: {
+              items: 3,
+            },
+          },
+        });
+        var owl_1 = $(".carousel-1");
+        $(".prev-1").click(function () {
+          owl_1.trigger("prev.owl");
+        });
+
+        $(".next-1").click(function () {
+          owl_1.trigger("next.owl");
+        });
+
+        var owl_2 = $(".carousel-2");
+        $(".prev-2").click(function () {
+          owl_2.trigger("prev.owl");
+        });
+
+        $(".next-2").click(function () {
+          owl_2.trigger("next.owl");
+        });
+      });
+    </script>
+    <!-- lenis scroll smooth scroll  -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const lenis = new Lenis();
+  
+        lenis.on("scroll", (e) => {
+          console.log(e);
+        });
+  
+        function raf(time) {
+          lenis.raf(time);
+          requestAnimationFrame(raf);
+        }
+  
+        requestAnimationFrame(raf);
+      });
+    </script>
+  </body>
+</html>
